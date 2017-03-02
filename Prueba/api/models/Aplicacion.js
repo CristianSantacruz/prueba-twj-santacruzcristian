@@ -8,7 +8,25 @@
 module.exports = {
 
   attributes: {
+    idAplicacion: {
+      model: 'Celular',
+      required: true
+    },
 
+    nombre: {
+      type: 'string',
+      required: true
+    },
+
+    version: {
+      type: 'integer',
+      required: true
+    },
+
+    tamaño: {
+      type: 'integer',
+      required: true
+    }
   }
 };
 

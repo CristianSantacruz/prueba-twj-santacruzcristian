@@ -8,7 +8,25 @@
 module.exports = {
 
   attributes: {
+    nombre: {
+      type: 'string',
+      required: true
+    },
 
+    sistemaOperativo: {
+      type: 'string',
+      required: true
+    },
+
+    version: {
+      type: 'integer',
+      required: true
+    },
+
+    aplicacion: {
+      collection: 'Aplicacion',
+      via: 'idCelular'
+    }
   }
 };
 

@@ -26,6 +26,8 @@
       <list>
         <option value="$PROJECT_DIR$/Prueba/api/controllers/RutasController.js" />
         <option value="$PROJECT_DIR$/Prueba/config/routes.js" />
+        <option value="$PROJECT_DIR$/Prueba/api/models/Celular.js" />
+        <option value="$PROJECT_DIR$/Prueba/api/models/Aplicacion.js" />
       </list>
     </option>
   </component>
@@ -140,7 +142,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
+              <option name="myItemId" value="models" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -156,6 +158,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$USER_HOME$/Downloads/TecnologiasWeb-1" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="editor.config.accepted" value="true" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
@@ -173,12 +176,12 @@
       <option name="presentableId" value="Default" />
       <updated>1488469693033</updated>
       <workItem from="1488469694733" duration="241000" />
-      <workItem from="1488469968166" duration="1675000" />
+      <workItem from="1488469968166" duration="2441000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1916000" />
+    <option name="totallyTimeSpent" value="2682000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -233,6 +236,24 @@
             <element signature="e#1423#1526#0" expanded="false" />
             <element signature="e#1568#2169#0" expanded="false" />
             <element signature="e#2211#2539#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Prueba/api/models/Aplicacion.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Prueba/api/models/Celular.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="370">
+          <caret line="9" column="14" lean-forward="false" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+          <folding>
+            <element signature="e#253#544#0" expanded="false" />
           </folding>
         </state>
       </provider>

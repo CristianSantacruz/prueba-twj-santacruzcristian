@@ -108,7 +108,7 @@ module.exports = {
         id: parametros.id
       }).exec(function (errorInesperado, aplicacionEliminada) {
         if (errorInesperado) {
-          return res.view('vistas/Error', {
+          return res.view('Vistas/Error', {
             error: {
               descripcion: "Tuvimos un Error Inesperado",
               rawError: errorInesperado,

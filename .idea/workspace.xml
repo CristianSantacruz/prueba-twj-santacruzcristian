@@ -30,8 +30,11 @@
         <option value="$PROJECT_DIR$/Prueba/api/models/Aplicacion.js" />
         <option value="$PROJECT_DIR$/Prueba/views/layout.ejs" />
         <option value="$PROJECT_DIR$/Prueba/views/Vistas/home.ejs" />
-        <option value="$PROJECT_DIR$/Prueba/api/controllers/CelularController.js" />
         <option value="$PROJECT_DIR$/Prueba/api/controllers/AplicacionController.js" />
+        <option value="$PROJECT_DIR$/Prueba/views/Vistas/Celular/crearCelular.ejs" />
+        <option value="$PROJECT_DIR$/Prueba/views/Vistas/Celular/editarCelular.ejs" />
+        <option value="$PROJECT_DIR$/Prueba/views/Vistas/Celular/listarCelular.ejs" />
+        <option value="$PROJECT_DIR$/Prueba/api/controllers/CelularController.js" />
       </list>
     </option>
   </component>
@@ -180,12 +183,12 @@
       <option name="presentableId" value="Default" />
       <updated>1488469693033</updated>
       <workItem from="1488469694733" duration="241000" />
-      <workItem from="1488469968166" duration="6453000" />
+      <workItem from="1488469968166" duration="9588000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6694000" />
+    <option name="totallyTimeSpent" value="9829000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -279,15 +282,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Prueba/api/controllers/CelularController.js">
+    <entry file="file://$PROJECT_DIR$/Prueba/views/Vistas/Celular/crearCelular.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="421">
-          <caret line="148" column="0" lean-forward="true" selection-start-line="148" selection-start-column="0" selection-end-line="148" selection-end-column="0" />
-          <folding>
-            <element signature="e#227#1622#0" expanded="false" />
-            <element signature="e#1661#2942#0" expanded="false" />
-            <element signature="e#2978#4183#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="456">
+          <caret line="12" column="10" lean-forward="false" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -299,6 +298,38 @@
             <element signature="e#236#1643#0" expanded="false" />
             <element signature="e#1685#2984#0" expanded="false" />
             <element signature="e#3026#4271#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Prueba/views/Vistas/Celular/listarCelular.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Prueba/views/Vistas/Celular/editarCelular.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="37">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Prueba/api/controllers/CelularController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="421">
+          <caret line="149" column="0" lean-forward="true" selection-start-line="149" selection-start-column="0" selection-end-line="149" selection-end-column="0" />
+          <folding>
+            <element signature="e#227#1622#0" expanded="false" />
+            <element signature="e#1661#2981#0" expanded="false" />
+            <element signature="e#3020#4229#0" expanded="false" />
           </folding>
         </state>
       </provider>

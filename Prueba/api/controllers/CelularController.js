@@ -59,7 +59,8 @@ module.exports = {
         Celular.update({
           id: parametros.id
         }, {
-          sistemaOperativo: parametros.sistemaOperativo
+          sistemaOperativo: parametros.sistemaOperativo,
+          version: parametros.version
         }).exec(function (error) {
           if (error) {
             return res.view('error', {
@@ -99,7 +100,7 @@ module.exports = {
       });
     }
   },
-  borrarRaza: function (req, res) {
+  borrarCelular: function (req, res) {
     var parametros = req.allParams();
 
     if (parametros.id) {
@@ -129,7 +130,7 @@ module.exports = {
               });
             }
             res.view('Vistas/Celular/listarCelular', {
-              razas: celularesEncontrados
+              celulares: celularesEncontrados
             });
           })
       })

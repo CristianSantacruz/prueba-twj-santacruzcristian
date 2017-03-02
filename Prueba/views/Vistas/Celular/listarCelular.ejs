@@ -1,0 +1,17 @@
+<div class="row">
+
+  <% for(var i=0; i<celulares.length; i++){ %>
+  <div class="col-sm-4">
+    <h3 class="text-center"> <%=celulares[i].nombre%></h3>
+    <h3 class="text-center"> Sistema Operativo: <%=celulares[i].sistemaOperativo%></h3>
+    <h3 class="text-center"> Versión: <%=celulares[i].version%></h3>
+    <a style="color:white" href="/Celular/BorrarCelular?id=<%=celulares[i].id%>">
+      <button class="btn btn-block btn-danger"> Borrar</button>
+    </a>
+    <br>
+    <a style="color:white" href="/EditarCelular?id=<%=celulares[i].id%>">
+      <button class="btn btn-block btn-success"> Editar</button>
+    </a>
+  </div>
+  <%  } %>
+</div>

@@ -8,7 +8,7 @@
 module.exports = {
 
   attributes: {
-    idAplicacion: {
+    idCelular: {
       model: 'Celular',
       required: true
     },

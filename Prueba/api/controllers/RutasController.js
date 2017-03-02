@@ -50,11 +50,11 @@ module.exports = {
     });
   },
   crearAplicacion: function (req, res) {
-    Aplicacion.find().exec(function (error, aplicacionesEncontradas) {
+    Celular.find().exec(function (error, celularesEncontrados) {
       if (error) return res.serverError();
       return res.view('Vistas/Aplicacion/crearAplicacion', {
-        title: 'Crear Aplicacion',
-        celulares: aplicacionesEncontradas
+        title: 'Crear Aplicación',
+        celulares: celularesEncontrados
       });
     });
   },
@@ -62,12 +62,13 @@ module.exports = {
     var parametros = req.allParams();
     console.log(parametros);
     if (parametros.id) {
+
       Aplicacion.findOne({
         id: parametros.id
       }).exec(function (error, aplicacionEncontrada) {
         if (error) return res.serverError();
         return res.view('Vistas/Aplicacion/editarAplicacion', {
-          title: 'Editar Aplicacion - ' + celularEncontrado.nombre,
+          title: 'Editar mascota ',
           aplicacion: aplicacionEncontrada
         })
       });
@@ -82,9 +83,8 @@ module.exports = {
     }
   },
   listarAplicacion: function (req, res) {
-    Aplicacion.find().exec(function (error, aplicacionesEncontradas) {
+    Aplicacion.find().populate("idCelular").exec(function (error, aplicacionesEncontradas) {
       if (error) return res.serverError();
-      sails.log.info(aplicacionesEncontradas);
       return res.view('Vistas/Aplicacion/listarAplicacion', {
         title: 'Lista de Aplicaciones',
         aplicaciones: aplicacionesEncontradas

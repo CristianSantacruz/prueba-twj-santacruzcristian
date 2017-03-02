@@ -11,23 +11,23 @@
 
         <div class="form-group">
           <label>Versión</label>
-          <input type="integer" disabled class="form-control" placeholder="Versión" name="version" value="<%= celular.version%>">
+          <input type="integer" class="form-control" placeholder="Versión" name="version" value="<%= aplicacion.version%>">
         </div>
 
         <div class="form-group">
           <label>Tamaño</label>
-          <input type="integer" disabled class="form-control" placeholder="Tamaño" name="tamaño" value="<%= celular.tamaño%>">
+          <input type="integer" class="form-control" placeholder="Tamaño" name="tamaño" value="<%= aplicacion.tamaño%>">
         </div>
 
-        <input type="hidden" name="id" value="<%=celular.id%>">
-        <button type="submit" class="btn btn-success">Editar Celular</button>
+        <input type="hidden" name="id" value="<%=aplicacion.id%>">
+        <button type="submit" class="btn btn-success">Editar Aplicacion</button>
 
       </form>
     </div>
     <div class="col-sm-4">
-      <h3 class="text-center"> ID: <%=celular.id%> -  <%=celular.nombre%></h3>
-      <h4 class="text-center"> Versión: <%=celular.version%></h4>
-      <h4 class="text-center"> Tamaño: <%=celular.tamaño%> MB</h4>
+      <h3 class="text-center"> ID: <%=aplicacion.id%> -  <%=aplicacion.nombre%></h3>
+      <h4 class="text-center"> Versión: <%=aplicacion.version%></h4>
+      <h4 class="text-center"> Tamaño: <%=aplicacion.tamaño%> MB</h4>
       <p class="text-center"></p>
     </div>
   </div>

@@ -1,6 +1,7 @@
 <div style='background-color:white;color:black;'>
-  <h1>Crear Aplicaciones</h1>
+  <h1>Crea Aplicaciones</h1>
   <p>Registrar Aplicaciones</p>
+
   <form action="aplicacion/crearAplicacion" method="post">
     <div class="form-group">
       <label>Nombre</label>
@@ -9,16 +10,15 @@
 
     <div class="form-group">
       <label>Versión</label>
-      <input type="integer" class="form-control" placeholder="Versión" name="version">
+      <input required type="integer" class="form-control" placeholder="Versión" name="version">
     </div>
 
     <div class="form-group">
       <label>Tamaño</label>
-      <input type="integer" class="form-control" placeholder="Tamaño" name="tamaño">
+      <input required type="integer" class="form-control" placeholder="Tamaño" name="tamaño">
     </div>
 
     <label for="">Celular</label>
-
     <select class="form-control" name="idCelular">
       <% for(var i=0; i<celulares.length; i++){ %>
       <option value='<%=celulares[i].id%>'>
@@ -27,6 +27,6 @@
       <%  } %>
     </select>
     <br>
-    <button type="submit" class="btn btn-success">Crear Aplicación</button>
+    <button type="submit" class="btn btn-success">Crear Aplicacion</button>
   </form>
 </div>

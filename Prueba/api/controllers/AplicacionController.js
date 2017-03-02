@@ -55,10 +55,11 @@ module.exports = {
   editarAplicacion: function (req, res) {
     var parametros = req.allParams();
     if (req.method == 'POST') {
-      if (parametros.id) {
+      if (parametros.nombre) {
         Aplicacion.update({
           id: parametros.id
         }, {
+          nombre: parametros.nombre,
           version: parametros.version,
           tamaño: parametros.tamaño
         }).exec(function (error) {
@@ -66,12 +67,11 @@ module.exports = {
             return res.view('error', {
               title: 'Error',
               error: {
-                descripcion: 'No se pudo editar la aplicacion: ' + error,
+                descripcion: 'No se pudo editar la aplicación: ' + error,
                 url: '/listarAplicacion'
               }
             });
           }
-
           Aplicacion.find().populate("idCelular").exec(function (error, aplicacionesEncontradas) {
             if (error) return res.serverError();
             return res.view('Vistas/Aplicacion/listarAplicacion', {
@@ -81,10 +81,11 @@ module.exports = {
           });
         });
       } else {
+        console.log('NO PARÁMETROS');
         return res.view('error', {
           title: 'Error',
           error: {
-            descripcion: 'No envió todos los parametros',
+            descripcion: 'No envía todos los parametros',
             url: '/editarAplicacion'
           }
         });
@@ -102,13 +103,12 @@ module.exports = {
   },
   borrarAplicacion: function (req, res) {
     var parametros = req.allParams();
-
     if (parametros.id) {
       Aplicacion.destroy({
         id: parametros.id
       }).exec(function (errorInesperado, aplicacionEliminada) {
         if (errorInesperado) {
-          return res.view('Vistas/Error', {
+          return res.view('vistas/Error', {
             error: {
               descripcion: "Tuvimos un Error Inesperado",
               rawError: errorInesperado,
@@ -123,7 +123,7 @@ module.exports = {
                 error: {
                   descripcion: "No se pudo cargar las aplicaciones",
                   rawError: errorIndefinido,
-                  url: "/ListarAplicacion"
+                  url: "/ListarAplicaciones"
                 }
               });
             }
@@ -135,7 +135,7 @@ module.exports = {
     } else {
       return res.view('Vistas/Error', {
         error: {
-          descripcion: "Ingrese el ID para borrar la aplicación",
+          descripcion: "Necesitamos el ID para borrar la aplicacion",
           rawError: "No envía ID",
           url: "/ListarAplicacion"
         }

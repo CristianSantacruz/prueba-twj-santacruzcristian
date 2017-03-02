@@ -28,7 +28,7 @@ module.exports = {
             sails.log.info(celularesEncontrados);
             return res.view('Vistas/Celular/listarCelular', {
               title: 'Lista de Celulares',
-              razas: celularesEncontrados
+              celulares: celularesEncontrados
             })
           });
         });
@@ -75,7 +75,7 @@ module.exports = {
             if (error) return res.serverError();
             return res.view('Vistas/Celular/listarCelular', {
               title: 'Lista de Celulares',
-              razas: celularesEncontrados
+              celulares: celularesEncontrados
             })
           });
         });

@@ -23,7 +23,7 @@ module.exports = {
       required: true
     },
 
-    aplicacion: {
+    aplicaciones: {
       collection: 'Aplicacion',
       via: 'idCelular'
     }

@@ -8,13 +8,13 @@
 module.exports = {
   crearAplicacion: function (req, res) {
     var parametros = req.allParams();
-
     if (req.method == 'POST') {
-      if (parametros.nombre && parametros.version && parametros.tamaño) {
+      if (parametros.nombre && parametros.version && parametros.tamaño && parametros.idCelular) {
         Aplicacion.create({
           nombre: parametros.nombre,
           version: parametros.version,
-          tamaño: parametros.tamaño
+          tamaño: parametros.tamaño,
+          idCelular: parametros.idCelular
         }).exec(function (error, aplicacionCreada) {
           if (error) return res.view('error', {
             title: 'Error',
@@ -23,7 +23,7 @@ module.exports = {
               url: '/crearAplicacion'
             }
           });
-          Aplicacion.find().exec(function (error, aplicacionesEncontradas) {
+          Aplicacion.find().populate("idCelular").exec(function (error, aplicacionesEncontradas) {
             if (error) return res.serverError();
             sails.log.info(aplicacionesEncontradas);
             return res.view('Vistas/Aplicacion/listarAplicacion', {
@@ -59,7 +59,8 @@ module.exports = {
         Aplicacion.update({
           id: parametros.id
         }, {
-          version: parametros.version
+          version: parametros.version,
+          tamaño: parametros.tamaño
         }).exec(function (error) {
           if (error) {
             return res.view('error', {
@@ -71,7 +72,7 @@ module.exports = {
             });
           }
 
-          Aplicacion.find().exec(function (error, aplicacionesEncontradas) {
+          Aplicacion.find().populate("idCelular").exec(function (error, aplicacionesEncontradas) {
             if (error) return res.serverError();
             return res.view('Vistas/Aplicacion/listarAplicacion', {
               title: 'Lista de Aplicaciones',
@@ -115,7 +116,7 @@ module.exports = {
             }
           });
         }
-        Aplicacion.find()
+        Aplicacion.find().populate("idCelular")
           .exec(function (errorIndefinido, aplicacionesEncontradas) {
             if (errorIndefinido) {
               res.view('Vistas/Error', {

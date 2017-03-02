@@ -8,7 +8,6 @@
 module.exports = {
   crearCelular: function (req, res) {
     var parametros = req.allParams();
-
     if (req.method == 'POST') {
       if (parametros.nombre && parametros.sistemaOperativo && parametros.version) {
         Celular.create({

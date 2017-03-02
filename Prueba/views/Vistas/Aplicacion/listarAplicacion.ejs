@@ -1,0 +1,21 @@
+<div class="row">
+  <% for(var i=0; i<aplicaciones.length; i++){ %>
+
+  <div class="col-sm-4">
+    <h3 class="text-center"> <%=aplicaciones[i].nombre%></h3>
+    <h4 class="text-center"> Versión: <%=aplicaciones[i].version%></h4>
+    <h4 class="text-center"> Tamaño: <%=aplicaciones[i].tamaño%> MB</h4>
+
+    <p class="text-center">
+      <%= aplicaciones[i].idCelular.nombre %>
+    </p>
+    <a style="color:white" href="/Aplicacion/BorrarAplicacion?id=<%=aplicaciones[i].id%>">
+      <button class="btn btn-block btn-danger"> Borrar</button>
+    </a>
+    <br>
+    <a style="color:white" href="/EditarAplicacion?id=<%=aplicaciones[i].id%>">
+      <button class="btn btn-block btn-success"> Editar</button>
+    </a>
+  </div>
+  <%  } %>
+</div>

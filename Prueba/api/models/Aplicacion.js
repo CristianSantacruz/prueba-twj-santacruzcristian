@@ -8,11 +8,6 @@
 module.exports = {
 
   attributes: {
-    idCelular: {
-      model: 'Celular',
-      required: true
-    },
-
     nombre: {
       type: 'string',
       required: true
@@ -25,6 +20,11 @@ module.exports = {
 
     tamaño: {
       type: 'integer',
+      required: true
+    },
+
+    idCelular:{
+      model: 'Celular',
       required: true
     }
   }

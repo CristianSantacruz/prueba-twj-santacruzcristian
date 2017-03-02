@@ -50,9 +50,13 @@ module.exports = {
     });
   },
   crearAplicacion: function (req, res) {
-    return res.view('Vistas/Aplicacion/crearAplicacion', {
-      title: 'Crear Aplicacion'
-    })
+    Aplicacion.find().exec(function (error, aplicacionesEncontradas) {
+      if (error) return res.serverError();
+      return res.view('Vistas/Aplicacion/crearAplicacion', {
+        title: 'Crear Aplicacion',
+        celulares: aplicacionesEncontradas
+      });
+    });
   },
   editarAplicacion: function (req, res) {
     var parametros = req.allParams();
@@ -83,7 +87,7 @@ module.exports = {
       sails.log.info(aplicacionesEncontradas);
       return res.view('Vistas/Aplicacion/listarAplicacion', {
         title: 'Lista de Aplicaciones',
-        celulares: aplicacionesEncontradas
+        aplicaciones: aplicacionesEncontradas
       })
     });
   }
